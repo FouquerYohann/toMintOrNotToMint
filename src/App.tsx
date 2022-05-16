@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { InputForm } from "./Input/InputForm";
+import "./App.css";
+import { useAppSelector } from "./state/hooks";
+import { Stack } from "@mui/material";
 
-function App() {
+const App = () => {
+  const shoesState = useAppSelector((state) => state.shoesState);
+
+  console.log(shoesState);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="HeaderArea">HEADER</header>
+      <div className="InputFormArea">
+        <Stack spacing={3}>
+          <InputForm title="First Shoe" index={0} />
+          <InputForm title="Second Shoe" index={1} />
+        </Stack>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
