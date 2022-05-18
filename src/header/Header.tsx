@@ -40,7 +40,7 @@ export const PriceHeader: React.FC = () => {
 
   useEffect(() => {
     getPrice(dispatch);
-  }, []);
+  }, [dispatch]);
 
   return (
     <Stack direction="row" spacing={10}>

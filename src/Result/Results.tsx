@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../state/hooks";
-import { debug } from "../state/shoeState";
+import React from "react";
+import { useAppSelector } from "../state/hooks";
 import {
   chanceTotalMint,
   selectShoeBoxChance,
@@ -31,12 +30,6 @@ export const Results = () => {
   const decote = useAppSelector((state) => state.decoteState);
   const mintingState = useAppSelector((state) => state.mintingState);
   const { sol, gst, gmt } = useAppSelector((state) => state.currencyState);
-
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(debug());
-  }, []);
 
   const GetStatisticsRevenuReplaced = () => {
     let ret = Object.keys(Rarity)
