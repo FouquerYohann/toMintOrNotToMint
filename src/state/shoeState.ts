@@ -14,6 +14,7 @@ type SetShoeKeyValueProps = {
   key: string;
   value: string | number;
 };
+
 export const shoeStateSlice = createSlice({
   name: "ShoeState",
   initialState: initShoesState,

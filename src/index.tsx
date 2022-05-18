@@ -6,9 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { shoeStateSlice } from "./state/shoeState";
+import { CurrencyStateSlice } from "./state/CurrencyState";
 
 const store = configureStore({
-  reducer: { shoesState: shoeStateSlice.reducer },
+  reducer: {
+    shoesState: shoeStateSlice.reducer,
+    currencyState: CurrencyStateSlice.reducer,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
