@@ -6,7 +6,10 @@ export type ShoesState = {
 };
 
 export const initShoesState: ShoesState = {
-  shoes: [],
+  shoes: [
+    { rarity: "Common", type: "Walker", nbMint: 2 },
+    { rarity: "Uncommon", type: "Runner", nbMint: 1 },
+  ],
 };
 
 type SetShoeKeyValueProps = {
@@ -31,7 +34,13 @@ export const shoeStateSlice = createSlice({
         state.shoes = [state.shoes[0], newShoe];
       }
     },
+    debug: (state) => {
+      state.shoes = [
+        { rarity: "Common", type: "Walker", nbMint: 2 },
+        { rarity: "Uncommon", type: "Runner", nbMint: 1 },
+      ];
+    },
   },
 });
 
-export const { setShoeKeyValue } = shoeStateSlice.actions;
+export const { setShoeKeyValue, debug } = shoeStateSlice.actions;

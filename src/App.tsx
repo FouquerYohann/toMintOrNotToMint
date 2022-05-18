@@ -3,6 +3,7 @@ import { InputForm } from "./Input/InputForm";
 import "./App.css";
 import { Stack } from "@mui/material";
 import { PriceHeader } from "./header/Header";
+import { Results } from "./Result/Results";
 
 const App = () => {
   return (
@@ -12,10 +13,13 @@ const App = () => {
       </header>
       <div className="InputFormArea">
         <Stack spacing={3}>
-          <InputForm title="First Shoe" index={0} />
-          <InputForm title="Second Shoe" index={1} />
+          <InputForm />
         </Stack>
       </div>
+      <div className="ResultArea">
+        <Results />
+      </div>
+      <div className="GraphArea"></div>
     </div>
   );
 };

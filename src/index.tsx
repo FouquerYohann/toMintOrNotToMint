@@ -7,10 +7,16 @@ import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { shoeStateSlice } from "./state/shoeState";
 import { CurrencyStateSlice } from "./state/CurrencyState";
+import { FloorPriceStateSlice } from "./state/FloorPriceState";
+import { DecoteStateSlice } from "./state/DecoteState";
+import { MintingStateSlice } from "./state/MintingState";
 
 const store = configureStore({
   reducer: {
     shoesState: shoeStateSlice.reducer,
+    floorPriceState: FloorPriceStateSlice.reducer,
+    decoteState: DecoteStateSlice.reducer,
+    mintingState: MintingStateSlice.reducer,
     currencyState: CurrencyStateSlice.reducer,
   },
 });

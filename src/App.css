@@ -1,7 +1,9 @@
 .App {
     display: grid;
-    grid-template-rows: 100px 1fr;
     grid-template-columns: 10% 1fr;
+    grid-template-rows: 10% repeat(3, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
 }
 
 .HeaderArea {
@@ -11,4 +13,12 @@
 
 .InputFormArea {
     grid-area: 2 / 2 / 3 / 3;
+}
+
+.ResultArea {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.GraphArea {
+    grid-area: 4 / 2 / 5 / 3;
 }
